@@ -141,3 +141,10 @@ Processing by PostsController#new as HTML
   Parameters: {"post"=>{"title"=>"A sample title", "description"=>"Descriptions\r\n"}}
   Rendered posts/new.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=Another+Test&post%5Bdescription%5D=IS+this+working%3F" for 76.21.186.46 at 2018-04-26 18:05:22 +0000
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"Another Test", "description"=>"IS this working?"}}
+  Rendered posts/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)

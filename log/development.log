@@ -264,3 +264,26 @@ ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticit
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.6ms)
+
+
+Started GET "/posts/new" for 76.21.186.46 at 2018-04-26 18:13:08 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 295ms (Views: 286.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 76.21.186.46 at 2018-04-26 18:13:15 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Trying this", "description"=>"New stuff"}, "authenticity_token"=>"EKuhM1S0ik62rhsE2uqHS3Aeo8e0laj/9VJiTPh42j30pcb82hcSjbt7OcuEUsg9T1Eh8vTFLwpNtO/RcbjgxQ=="}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Trying this"], ["description", "New stuff"], ["created_at", "2018-04-26 18:13:15.271080"], ["updated_at", "2018-04-26 18:13:15.271080"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Redirected to http://159.89.225.105:41569/posts
+Completed 302 Found in 11ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/posts" for 76.21.186.46 at 2018-04-26 18:13:15 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.2ms)

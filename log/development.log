@@ -287,3 +287,4 @@ Started GET "/posts" for 76.21.186.46 at 2018-04-26 18:13:15 +0000
 Processing by PostsController#index as HTML
   [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
   Rendered posts/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.2ms)
